@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e2e1e0, #9aaae5);
+            padding: 40px;
+            
+
+        .order-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: #aeebdb;
+            border: none;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .order-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-container">
+    <h2>🛒 Place Your Order</h2>
+    
+    <form action="submit_order.php" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="customer_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="customer_email" required>
+
+        <label for="product">Select Product:</label>
+        <select id="product" name="product">
+            <option value="product1">Tablet</option>
+            <option value="product2"> Cream Tube</option>
+            <option value="product3">Syrup</option>
+            <option value="product3">Other</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+        <button type="submit">Submit Order</button>
+        <script>
+            const form = document.querySelector('form');
+        
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+        
+    
+                alert('✅ Order submitted successfully!');
+        
+    
+                form.reset();
+            });
+        </script>
+        
+    </form>
+</div>
+
+</body>
+</html>

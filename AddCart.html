@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ed9696;
+        margin: 0;
+        padding: 20px;
+    }
+    .product-container {
+        display: flex;
+        gap: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .product-image img {
+        max-width: 300px;
+        border-radius: 5px;
+    }
+    .product-details {
+        flex: 1;
+    }
+    .buttons {
+        margin-top: 20px;
+    }
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+    .btn-cart {
+        background-color: orange;
+        color: white;
+    }
+    .btn-buy {
+        background-color: #ff6600;
+        color: white;
+    }
+    .specs {
+        margin-top: 20px;
+    }
+    .specs h3 {
+        margin-bottom: 10px;
+    }
+    .specs p {
+        margin: 5px 0;
+    }
+    .frequently {
+        background: white;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .freq-products {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .freq-item {
+        text-align: center;
+        width: 150px;
+    }
+    .freq-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    .total {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .add-btn {
+        background: orange;
+        color:orange;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="dis1.jpeg" alt="Product">
+    </div>
+    <div class="product-details">
+        <h2>HERBOOK PRO</h2>
+        <div class="buttons">
+           
+            <button class="btn btn-buy"><a href="Footer.html">Buy Now</a> </button>
+        </div>
+        <div class="specs">
+            <h3>Specifications</h3>
+            <p><strong>Warranty:</strong> 1 Year Onsite</p>
+            <p><strong>Service:</strong> Service Center</p>
+            <p><strong>Covered in Warranty:</strong> Manufacturing Defects</p>
+            <p><strong>Not Covered:</strong> Physical Damage</p>
+        </div>
+    </div>
+</div>
+
+<div class="frequently">
+    <h3>Frequently Bought Together</h3>
+    <div class="freq-products">
+        <div class="freq-item">
+            <input type="checkbox" checked onchange="updateTotal()">
+            <img src="https://via.placeholder.com/100" alt="">
+            <p>Laptop</p>
+            <p>₹19,390</p>
+        </div>
+        +
+        <div class="freq-item">
+            <input type="checkbox" checked onchange="updateTotal()">
+            <img src="https://via.placeholder.com/100" alt="">
+            <p>Keyboard</p>
+            <p>₹349</p>
+        </div>
+        +
+        <div class="freq-item">
+            <input type="checkbox" checked onchange="updateTotal()">
+            <img src="https://via.placeholder.com/100" alt="">
+            <p>Mouse</p>
+            <p>₹300</p>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
